@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## v2.0.1 - 2022-03-10
+
+* Initial open source release.
+
 ## v2.0.0 - 2021-08-20
 
 Complete rewrite
