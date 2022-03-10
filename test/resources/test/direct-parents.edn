@@ -1,0 +1,4 @@
+{:def/from ["lib/a"
+            "lib/c"]
+ :direct-parents true
+ :my-value 420}

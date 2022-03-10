@@ -1,0 +1,24 @@
+digraph G {
+  manifest -> dir_app;
+  manifest -> base_app;
+  dir_app -> dir_special_mixin
+  dir_app -> base_special_mixin;
+  base_app -> dir_deployment;
+  base_app -> base_deployment;
+  dir_deployment -> dir_mixin
+  dir_deployment -> base_mixin
+  base_deployment -> dir_resource;
+  base_deployment -> base_resource;
+
+  manifest [label="manifest :def/from [\"app\"]" shape=Mdiamond];
+  dir_app [label="dir/app :def/from [\"special_mixin\"]"];
+  base_app [label="base/app :def/from [\"deployment\"]"];
+  dir_mixin [label="dir/mixin"];
+  base_mixin [label="base/mixin"];
+  dir_deployment [label="dir/deployment :def/from [\"mixin\"]"];
+  base_deployment [label="base/deployment :def/from [\"resource\"]"];
+  dir_resource [label="dir/resource"]
+  base_resource [label="base/resource"]
+  dir_special_mixin [label="dir/special_mixin"]
+  base_special_mixin [label="base/special_mixin"]
+}

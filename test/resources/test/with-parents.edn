@@ -1,0 +1,3 @@
+{:def/from ["a" "b"]
+ :def/my-meta "abc"
+ :with-parents true}

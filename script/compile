@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+
+set -eou pipefail
+
+THE_XMX=${THE_XMX:-"-J-Xmx4500m"}
+
+if [ -z "$GRAALVM_HOME" ]; then
+    echo "Please set GRAALVM_HOME"
+    exit 1
+fi
+
+THE_JAR=${THE_JAR:-"target/lighthouse.jar"}
+
+echo "Building from $THE_JAR"
+
+if [[ ! -f "$THE_JAR" ]]
+then
+    echo "$THE_JAR not found. Please run script/uberjar first."
+    exit 1
+fi
+
+"$GRAALVM_HOME/bin/gu" install native-image
+
+export JAVA_HOME=$GRAALVM_HOME
+export PATH=$GRAALVM_HOME/bin:$PATH
+
+THE_BINARY=${THE_BINARY:-"lh"}
+
+args=( "-jar" "$THE_JAR"
+       "-H:Name=$THE_BINARY"
+       "-H:+ReportExceptionStackTraces"
+       "--initialize-at-build-time"
+       "--enable-all-security-services"
+       "--verbose"
+       "--no-fallback"
+       "--no-server"
+       "--report-unsupported-elements-at-runtime"
+       "--native-image-info"
+       "--verbose"
+       "$THE_XMX" )
+
+IS_STATIC=${IS_STATIC:-}
+USE_MUSL=${USE_MUSL:-}
+
+if [ "$IS_STATIC" = "true" ]; then
+    args+=("--static")
+    if [ "$USE_MUSL" = "true" ]; then
+        args+=("--libc=musl"
+               # see https://github.com/oracle/graal/issues/3398
+               "-H:CCompilerOption=-Wl,-z,stack-size=2097152")
+    fi
+fi
+
+"$GRAALVM_HOME/bin/native-image" "${args[@]}"

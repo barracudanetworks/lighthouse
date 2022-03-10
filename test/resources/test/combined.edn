@@ -1,0 +1,5 @@
+{:parents {:with-parents {:def/from ["with-parents"]}
+           :direct-parents {:def/from ["direct-parents"]}}
+ :group/grouped
+ {:with-parents {:def/from ["with-parents"]}
+  :direct-parents {:def/from ["direct-parents"]}}}

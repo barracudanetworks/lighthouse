@@ -1,0 +1,3 @@
+{:linters {:refer-all {:exclude [clojure.test]}}
+ :lint-as {lh.cli/defclifn clojure.core/defn
+           lh.test-support/with-tmp-files clojure.core/let}}
