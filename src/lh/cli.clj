@@ -122,6 +122,8 @@
    :version (str/trim (slurp (io/resource "VERSION")))
    :subcommands [{:command "build"
                   :description "Generates output manifests for all provided files."
+                  :examples ["Build manifests for all files in a directory:\n   lh build environment\n"
+                             "Build manifest for single .edn file\n   lh build environment/service.edn"]
                   :runs build!
                   :opts [{:as ["an EDN map that will override that found in lighthouse.edn"]
                           :option "override-config"
@@ -130,6 +132,8 @@
                           :default {}}]}
                  {:command "update"
                   :description "Updates 1-to-many values in 1-to-many given files"
+                  :examples [(str "Update :service key to \"v1.0.0\" in tags metadata file:\n"
+                                  "   lh update -s service=v1.0.0 environment/meta/tags.edn")]
                   :runs update!
                   :opts [{:as ["a CSV of path/value pairs to set. Can be given multiple times."]
                           :option "set"
@@ -139,6 +143,7 @@
                           :default :present}]}
                  {:command "visualize"
                   :description "Renders a graphvis visualization of the provided file"
+                  :examples ["lh visualize environment/service.edn -o service.dot"]
                   :runs graph
                   :opts [{:as ["output graphvis rendering to this file"]
                           :option "output"

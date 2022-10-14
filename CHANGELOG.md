@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+* Add examples to help for each subcommand
+
 ## v2.0.1 - 2022-03-10
 
 * Initial open source release.
