@@ -1,3 +1,7 @@
+Proposed outline of new documentation. Each heading is a page, with bullet
+points explaining content.
+
+Pages:
 
 <!-- MarkdownTOC -->
 
