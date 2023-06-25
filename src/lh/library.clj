@@ -8,8 +8,6 @@
             [lh.utils :as utils]
             [sci.core :as sci]))
 
-(set! *warn-on-reflection* true)
-
 (defn throw-at-node!
   [node msg data]
   (let [data (merge data (meta node))]

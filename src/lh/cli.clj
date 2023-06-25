@@ -17,8 +17,6 @@
 (alter-var-root #'svg/get-frame (constantly nil))
 (alter-var-root #'svg/show! (constantly nil))
 
-(set! *warn-on-reflection* true)
-
 (def response-code
   "Values return from `cli-matic` handlers are treated as response codes.
 

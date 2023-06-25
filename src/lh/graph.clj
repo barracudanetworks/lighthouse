@@ -8,8 +8,6 @@
             [lh.utils :as utils])
   (:import [java.io File]))
 
-(set! *warn-on-reflection* true)
-
 (defn node-name
   "Returns the name for a graphvis node."
   [{:keys [root]} ^File f]

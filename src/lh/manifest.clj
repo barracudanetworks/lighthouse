@@ -7,8 +7,6 @@
             [lh.utils :as utils])
   (:import [java.io File Writer]))
 
-(set! *warn-on-reflection* true)
-
 ;; side-effect: load our processors
 (require 'lh.processors.kube)
 

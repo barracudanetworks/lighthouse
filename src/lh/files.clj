@@ -6,8 +6,6 @@
             [lh.utils :as utils])
   (:import [java.io File]))
 
-(set! *warn-on-reflection* true)
-
 (defn absolute-file
   [^File file]
   (.getAbsoluteFile file))

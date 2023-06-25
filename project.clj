@@ -11,6 +11,7 @@
                  [hiccup "1.0.5"]
                  [org.clojure/data.json "2.0.1"]]
   :main lh.cli
+  :global-vars {*warn-on-reflection* true}
   :profiles {:test {:resource-paths ["test/resources"]}
              :dev {:resource-paths ["test/resources"]}
              :uberjar {:aot :all
