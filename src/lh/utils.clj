@@ -5,8 +5,6 @@
             [clojure.string :as str]
             [clojure.walk :as walk]))
 
-(set! *warn-on-reflection* true)
-
 (defn contains-in?
   "Returns true if `path` exists in `config`."
   [map [first & rest]]

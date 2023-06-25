@@ -4,8 +4,6 @@
             [lh.files :as files])
   (:import [java.io File]))
 
-(set! *warn-on-reflection* true)
-
 (def required-keys #{})
 (def default-config
   {:output-format :edn

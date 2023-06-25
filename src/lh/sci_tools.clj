@@ -5,8 +5,6 @@
            [java.time.format DateTimeFormatter]
            [java.util Base64]))
 
-(set! *warn-on-reflection* true)
-
 (defn iso-timestamp-now
   "Returns an ISON timestamp."
   []

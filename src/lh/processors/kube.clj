@@ -3,8 +3,6 @@
             [clojure.walk :as walk]
             [lh.library :as lib]))
 
-(set! *warn-on-reflection* true)
-
 ;;
 ;; Stage 3
 ;;
