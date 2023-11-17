@@ -34,4 +34,4 @@ GLOBAL OPTIONS:
 
 Coming soon.
 
-[<: Introduction](/doc/01-introduction.md) | [Tutorial :>](/doc/03-tutorial.md)
+[<: Introduction](01-introduction.md) | [Tutorial :>](03-tutorial.md)

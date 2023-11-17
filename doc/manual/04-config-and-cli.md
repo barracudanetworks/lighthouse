@@ -4,4 +4,4 @@
 
 ## CLI
 
-[<: Tutorial](/doc/03-tutorial.md) | TBD
+[<: Tutorial](03-tutorial.md) | TBD
