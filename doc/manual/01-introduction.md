@@ -24,4 +24,4 @@ During the development of our Kubernetes cluster, our team found issues with Hel
 
 All-in-all, Helm and Go templates had just become a labor to deal with and manage, so we started looking for options. We decided we just wanted to deal with plain manifests. However, YAML (as mentioned above) isn't the best data language so we didn't want to use it if we didn't have to. Eventually, we settled on using EDN structures and a small library to convert EDN into YAML. That "small" library has transformed into this library.
 
-[Installation :>](/doc/02-installation.md)
+[Installation :>](./02-installation.md)
