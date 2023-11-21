@@ -1,0 +1,15 @@
+# ------------------------------------------------------------
+# AUTO-GENERATED FILE. ANY MANUAL CHANGES WILL BE OVERWRITTEN.
+# ------------------------------------------------------------
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: echo
+spec:
+  containers:
+  - image: hashicorp/http-echo:0.2.3
+    name: echo
+    ports:
+    - containerPort: 5678
+      name: http

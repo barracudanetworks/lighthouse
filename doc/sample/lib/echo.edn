@@ -1,0 +1,6 @@
+{def/from ["pod"]
+ def/name "echo"
+ :spec {:containers
+        {ref/name
+         {:image :ref/images.echo
+          :ports {:http {:container-port 5678}}}}}}

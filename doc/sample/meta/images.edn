@@ -1,0 +1,2 @@
+{:echo "hashicorp/http-echo:0.2.3"
+ :nginx "nginx:1.24.0"}
