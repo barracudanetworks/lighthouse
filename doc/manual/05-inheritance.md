@@ -4,4 +4,4 @@
 * Merging logic
 * Deep merge examples
 
-[<: Configuration and CLI](04-config-and-cli.md) | [Metadata :>](06-metadata.md)
+[<: CLI and Configuration](04-cli-and-config.md) | [Metadata :>](06-metadata.md)

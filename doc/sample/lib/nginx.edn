@@ -1,0 +1,6 @@
+{def/from ["pod"]
+ def/name "nginx"
+ :spec {:containers
+        {ref/name
+         {:image :ref/images.nginx
+          :ports {:http {:container-port 80}}}}}}

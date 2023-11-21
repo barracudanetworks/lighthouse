@@ -483,4 +483,4 @@ Lighthouse provides more facilities for tuning the output, such as:
 * Combining several library files into a single output manifest
 * Storing metadata in separate files
 
-[<: Installation](02-installation.md) | [Configuration and CLI :>](04-config-and-cli.md)
+[<: Installation](02-installation.md) | [CLI and Configuration :>](04-cli-and-config.md)

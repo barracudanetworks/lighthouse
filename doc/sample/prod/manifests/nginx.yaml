@@ -1,0 +1,16 @@
+# ------------------------------------------------------------
+# AUTO-GENERATED FILE. ANY MANUAL CHANGES WILL BE OVERWRITTEN.
+# ------------------------------------------------------------
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  namespace: prod-ns
+spec:
+  containers:
+  - image: nginx:1.24.0
+    name: nginx
+    ports:
+    - containerPort: 80
+      name: http
